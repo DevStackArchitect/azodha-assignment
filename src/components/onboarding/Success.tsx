@@ -8,11 +8,11 @@ interface SuccessProps {
 }
 
 const Success: React.FC<SuccessProps> = ({ onContinue }) => {
-  const [countdown, setCountdown] = useState(8);
+  const [countdown, setCountdown] = useState(4);
 
   useEffect(() => {
     if (countdown > 0) {
-      const timer = setTimeout(() => setCountdown(countdown - 1), 3000);
+      const timer = setTimeout(() => setCountdown(countdown - 1), 1000);
       return () => clearTimeout(timer);
     } else {
       onContinue();
