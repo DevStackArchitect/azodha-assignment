@@ -14,14 +14,8 @@ export default function Home() {
     } else if (isCompleted) {
       router.push('/home');
     } else {
-      // Redirect to the appropriate onboarding step
-      const stepPaths = [
-        '/onboarding/personal-profile',
-        '/onboarding/favorite-songs',
-        '/onboarding/payment-information',
-        '/onboarding/success',
-      ];
-      router.push(stepPaths[currentStep - 1]);
+      // Redirect to onboarding page, which will handle showing the correct step
+      router.push('/onboarding');
     }
   }, [isAuthenticated, isCompleted, currentStep, router]);
 
