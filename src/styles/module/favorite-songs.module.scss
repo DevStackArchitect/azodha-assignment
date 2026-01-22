@@ -1,0 +1,339 @@
+@import "../base";
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $spacing-xl;
+  background: $background;
+
+  @include mobile {
+    padding: $spacing-xl $spacing-md;
+  }
+}
+
+.content {
+  width: 100%;
+  max-width: 600px;
+}
+
+.titleSection {
+  text-align: center;
+  margin-bottom: $spacing-6xl;
+}
+
+.title {
+  @include display-md-regular;
+  color: $foreground;
+  margin-bottom: $spacing-xl;
+  letter-spacing: -0.02em;
+
+  @include mobile {
+    font-size: 1.75rem;
+  }
+}
+
+.description {
+  @include text-md-regular;
+  line-height: 1.6;
+  color: $text-muted;
+}
+
+.searchBar {
+  margin-bottom: $spacing-4xl;
+}
+
+.searchWrapper {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xl;
+  padding: $spacing-xl;
+  border-radius: $radius-2xl;
+  background: $input-bg;
+  border: 1px solid $input-border;
+
+  @include mobile {
+    flex-wrap: wrap;
+    gap: $spacing-md;
+  }
+}
+
+.searchInput {
+  @include text-md-regular;
+  flex: 1;
+  background: transparent;
+  color: $text-muted;
+  border: none;
+  outline: none;
+
+  &::placeholder {
+    color: $input-placeholder;
+  }
+}
+
+.addButton {
+  @include text-sm-medium;
+  padding: $spacing-md $spacing-xl;
+  border-radius: $radius-lg;
+  background: $button-bg;
+  color: $button-text;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  @include mobile {
+    width: 100%;
+    padding: $spacing-md;
+  }
+}
+
+.addForm {
+  margin-bottom: $spacing-3xl;
+  padding: $spacing-3xl;
+  border-radius: $radius-2xl;
+  background: $input-bg;
+  border: 1px solid $input-border;
+}
+
+.formTitle {
+  @include text-md-semibold;
+  color: $foreground;
+  margin-bottom: $spacing-xl;
+}
+
+.formFields {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xl;
+
+  @include mobile {
+    gap: 0.82rem;
+  }
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+}
+
+.formLabel {
+  @include text-xs-semibold;
+  display: block;
+  text-transform: uppercase;
+  margin-bottom: $spacing-md;
+  letter-spacing: 0.2em;
+  color: $text-label;
+}
+
+.input {
+  @include text-md-regular;
+  width: 100%;
+  height: 50px;
+  padding: 0 $spacing-xl;
+  border-radius: $radius-xl;
+  background: $background;
+  border: 1px solid $input-border;
+  color: $input-text;
+  outline: none;
+  transition: all 0.2s;
+
+  &:focus {
+    border-color: $border-focus;
+    box-shadow: 0 0 0 2px rgba($primary, 0.2);
+  }
+
+  &::placeholder {
+    color: $input-placeholder;
+  }
+}
+
+.formButtons {
+  display: flex;
+  gap: $spacing-lg;
+}
+
+.submitButton {
+  @include text-md-semibold;
+  flex: 1;
+  height: 50px;
+  border-radius: $radius-xl;
+  background: $button-bg;
+  color: $button-text;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.cancelButton {
+  @include text-md-semibold;
+  flex: 1;
+  height: 50px;
+  border-radius: $radius-xl;
+  background: transparent;
+  color: $text-muted;
+  border: 1px solid $input-border;
+  cursor: pointer;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.errorMessage {
+  @include text-sm-regular;
+  margin-bottom: $spacing-3xl;
+  background: rgba($error, 0.1);
+  border: 1px solid rgba($error, 0.2);
+  color: $error;
+  padding: $spacing-3xl;
+  border-radius: $radius-2xl;
+}
+
+.songsList {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
+  margin-bottom: $spacing-4xl;
+}
+
+.songItem {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xl;
+  padding: $spacing-xl;
+  border-radius: $radius-2xl;
+  background: $input-bg;
+  border: 1px solid $input-border;
+  transition: all 0.2s;
+
+  &:hover {
+    border-color: $card-hover-border;
+  }
+
+  @include mobile {
+    gap: $spacing-md;
+    padding: $spacing-md;
+  }
+}
+
+.albumArt {
+  width: $spacing-6xl;
+  height: $spacing-6xl;
+  border-radius: $radius-lg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $background;
+  flex-shrink: 0;
+}
+
+.songInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.songTitle {
+  @include text-md-medium;
+  color: $foreground;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.songArtist {
+  @include text-sm-regular;
+  color: $text-muted;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.removeButton {
+  background: none;
+  border: none;
+  color: $text-muted;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-8xl 0;
+  margin-bottom: $spacing-4xl;
+}
+
+.emptyText {
+  @include text-md-regular;
+  margin-top: $spacing-xl;
+  color: $text-label;
+}
+
+.finalizeButton {
+  @include text-lg-semibold;
+  width: 100%;
+  height: 60px;
+  border-radius: $radius-2xl;
+  background: $button-bg;
+  color: $button-text;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-md;
+  margin-bottom: $spacing-3xl;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-4xl;
+  margin-bottom: $spacing-8xl;
+}
+
+.navButton {
+  @include text-md-regular;
+  color: $text-muted;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.divider {
+  color: $border-primary;
+}
+
+.footer {
+  @include text-xs-regular;
+  text-align: center;
+  color: $text-label;
+}

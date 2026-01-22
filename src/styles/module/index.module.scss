@@ -1,0 +1,34 @@
+@import "../base";
+
+.loadingContainer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $background;
+}
+
+.loadingContent {
+  text-align: center;
+}
+
+.spinner {
+  width: $spacing-7xl;
+  height: $spacing-7xl;
+  border: 4px solid $primary;
+  border-top-color: transparent;
+  border-radius: $radius-full;
+  animation: spin 1s linear infinite;
+  margin: 0 auto $spacing-xl;
+}
+
+.loadingText {
+  @include text-xl-semibold;
+  color: $foreground;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

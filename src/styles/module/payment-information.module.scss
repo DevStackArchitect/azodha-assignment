@@ -1,0 +1,320 @@
+@import "../base";
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $spacing-6xl $spacing-xl;
+  background: $background;
+
+  @include mobile {
+    padding: $spacing-xl $spacing-md;
+  }
+}
+
+.content {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.titleSection {
+  text-align: center;
+  margin-bottom: $spacing-6xl;
+}
+
+.title {
+  @include display-md-regular;
+  color: $foreground;
+  margin-bottom: $spacing-xl;
+  letter-spacing: -0.02em;
+
+  @include mobile {
+    font-size: 1.75rem;
+  }
+}
+
+.description {
+  @include text-md-regular;
+  line-height: 1.6;
+  color: $text-muted;
+}
+
+.mainContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $spacing-6xl;
+  margin-bottom: $spacing-4xl;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    gap: $spacing-4xl;
+  }
+
+  @include mobile {
+    gap: $spacing-3xl;
+  }
+}
+
+.cardColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.creditCard {
+  width: 100%;
+  max-width: 400px;
+  border-radius: $radius-2xl;
+  padding: $spacing-4xl;
+  background: linear-gradient(135deg, $background 0%, $background-dark 100%);
+  border: 1px solid $border-primary;
+  @include shadow-2xl;
+  margin-bottom: $spacing-3xl;
+
+  @include mobile {
+    max-width: 100%;
+    padding: $spacing-3xl;
+  }
+}
+
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: $spacing-6xl;
+}
+
+.chip {
+  width: 3.5rem;
+  height: 2.75rem;
+  border-radius: $radius-lg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $primary;
+}
+
+.chipGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px;
+}
+
+.chipDot {
+  width: $spacing-md;
+  height: $spacing-md;
+  border-radius: $radius-xs;
+  background: $primary-dark;
+}
+
+.cardLogo {
+  @include title-md-bold;
+  color: $foreground;
+  font-style: italic;
+  letter-spacing: 0.1em;
+}
+
+.cardNumber {
+  @include text-xl-regular;
+  color: $foreground;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.3em;
+  text-align: center;
+  margin-bottom: $spacing-4xl;
+}
+
+.cardFooter {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.cardField {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardFieldLabel {
+  @include text-xs-regular;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  letter-spacing: 0.1em;
+  color: $text-muted;
+}
+
+.cardFieldValue {
+  @include text-sm-semibold;
+  color: $foreground;
+  text-transform: uppercase;
+}
+
+.cardFieldMono {
+  @extend .cardFieldValue;
+  font-family: 'Courier New', monospace;
+}
+
+.securityBadge {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  margin-bottom: $spacing-md;
+}
+
+.badgeText {
+  @include text-sm-semibold;
+  color: $primary;
+}
+
+.securityNote {
+  @include text-xs-regular;
+  text-align: center;
+  color: $text-label;
+}
+
+.formColumn {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-3xl;
+
+  @include mobile {
+    gap: 0.82rem;
+  }
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+}
+
+.formLabel {
+  @include text-xs-semibold;
+  display: block;
+  text-transform: uppercase;
+  margin-bottom: $spacing-xl;
+  letter-spacing: 0.2em;
+  color: $text-label;
+}
+
+.input {
+  @include text-md-regular;
+  width: 100%;
+  height: 60px;
+  padding: 0 $spacing-3xl;
+  border-radius: $radius-2xl;
+  background: $input-bg;
+  border: 1px solid $input-border;
+  color: $input-text;
+  outline: none;
+  transition: all 0.2s;
+
+  &:focus {
+    border-color: $border-focus;
+    box-shadow: 0 0 0 2px rgba($primary, 0.2);
+  }
+
+  &.error {
+    border-color: $error;
+  }
+
+  &::placeholder {
+    color: $input-placeholder;
+  }
+
+  &.mono {
+    font-family: 'Courier New', monospace;
+  }
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.inputIcon {
+  position: absolute;
+  top: 50%;
+  right: $spacing-3xl;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.infoButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.errorText {
+  @include text-sm-regular;
+  margin-top: $spacing-md;
+  color: $error;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $spacing-3xl;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: $spacing-xl;
+  }
+}
+
+.submitButton {
+  @include text-lg-semibold;
+  width: 100%;
+  height: 60px;
+  border-radius: $radius-2xl;
+  background: $button-bg;
+  color: $button-text;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-md;
+  margin-top: $spacing-4xl;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-4xl;
+  margin-bottom: $spacing-8xl;
+}
+
+.navButton {
+  @include text-md-regular;
+  color: $text-muted;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.divider {
+  color: $border-primary;
+}
+
+.footer {
+  @include text-xs-regular;
+  text-align: center;
+  color: $text-label;
+}

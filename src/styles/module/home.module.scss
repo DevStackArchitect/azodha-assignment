@@ -1,0 +1,154 @@
+@import "../base";
+
+.homeContainer {
+  min-height: 100vh;
+  display: flex;
+  background: $background;
+
+  @include mobile {
+    flex-direction: column;
+    padding-top: 60px; // Space for top header
+  }
+}
+
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-7xl $spacing-6xl;
+
+  @include tablet {
+    padding: $spacing-5xl $spacing-4xl;
+  }
+
+  @include mobile {
+    padding: $spacing-xl $spacing-md;
+    justify-content: flex-start;
+  }
+}
+
+.profilePicture {
+  margin-bottom: $spacing-4xl;
+
+  img {
+    width: 6rem;
+    height: 6rem;
+    border-radius: $radius-full;
+    object-fit: cover;
+    border: 2px solid $border-secondary;
+  }
+}
+
+.profileInitial {
+  width: 6rem;
+  height: 6rem;
+  border-radius: $radius-full;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $background-light;
+  @include title-md-semibold;
+  color: $foreground;
+}
+
+.welcomeTitle {
+  @include display-lg-regular;
+  color: $foreground;
+  margin-bottom: $spacing-xl;
+  letter-spacing: -0.02em;
+
+  @include mobile {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+.welcomeText {
+  @include text-md-regular;
+  text-align: center;
+  line-height: 1.6;
+  color: $text-muted;
+  margin-bottom: $spacing-8xl;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $spacing-3xl;
+  margin-bottom: $spacing-6xl;
+  max-width: 80rem;
+  width: 100%;
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+    gap: $spacing-xl;
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: $spacing-lg;
+  }
+}
+
+.card {
+  padding: $spacing-3xl;
+  border-radius: $radius-2xl;
+  background: $card-bg;
+  border: 1px solid $card-border;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    border-color: $card-hover-border;
+  }
+
+  @include mobile {
+    padding: $spacing-md;
+  }
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  margin-bottom: $spacing-xl;
+}
+
+.cardBadge {
+  @include text-xs-semibold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: $text-label;
+}
+
+.cardTitle {
+  @include text-lg-semibold;
+  color: $foreground;
+  margin-bottom: $spacing-md;
+}
+
+.cardDescription {
+  @include text-sm-regular;
+  color: $text-muted;
+}
+
+.startButton {
+  @include text-lg-semibold;
+  padding: 0 $spacing-6xl;
+  height: 60px;
+  border-radius: $radius-2xl;
+  background: $base-white;
+  color: $base-black;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: $spacing-lg;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}

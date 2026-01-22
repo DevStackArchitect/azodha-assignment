@@ -1,0 +1,41 @@
+{
+  "name": "azodha-assignment",
+  "version": "1.0.0",
+  "description": "Multi-step onboarding flow application with Redux state management and localStorage persistence",
+  "author": "Azodha Assignment",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "format:fix": "prettier --write ."
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.11.2",
+    "formik": "^2.4.9",
+    "framer-motion": "^11.15.0",
+    "lucide-react": "^0.562.0",
+    "next": "16.1.4",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "react-hot-toast": "^2.4.1",
+    "react-redux": "^9.2.0",
+    "sass": "^1.97.2",
+    "yup": "^1.7.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "babel-plugin-react-compiler": "1.0.0",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.4",
+    "prettier": "^3.8.0",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

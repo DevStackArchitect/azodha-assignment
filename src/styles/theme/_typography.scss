@@ -1,0 +1,459 @@
+// Typography Styles
+
+
+
+// Display Styles (Spectral font for 3xl, 2xl, xl, lg)
+@mixin display-3xl-semibold {
+  font-size: 4.5rem; // 72px
+  line-height: 5.5rem; // 88px
+  font-weight: 600;
+}
+
+@mixin display-3xl-regular {
+
+  font-size: 4.5rem; // 72px
+  line-height: 5.5rem; // 88px
+  font-weight: normal;
+}
+
+@mixin display-2xl-regular {
+
+  font-size: 4rem; // 64px
+  line-height: 5rem; // 80px
+  font-weight: normal;
+}
+
+@mixin display-2xl-medium {
+
+  font-size: 4rem; // 64px
+  line-height: 5rem; // 80px
+  font-weight: 500;
+}
+
+@mixin display-2xl-semibold {
+
+  font-size: 4rem; // 64px
+  line-height: 5rem; // 80px
+  font-weight: 600;
+}
+
+@mixin display-2xl-bold {
+
+  font-size: 4rem; // 64px
+  line-height: 5rem; // 80px
+  font-weight: bold;
+}
+
+@mixin display-xl-regular {
+
+  font-size: 3.5rem; // 56px
+  line-height: 4.5rem; // 72px
+  font-weight: normal;
+}
+
+@mixin display-xl-medium {
+
+  font-size: 3.5rem; // 56px
+  line-height: 4.5rem; // 72px
+  font-weight: 500;
+}
+
+@mixin display-xl-semibold {
+
+  font-size: 3.5rem; // 56px
+  line-height: 4.5rem; // 72px
+  font-weight: 600;
+}
+
+@mixin display-xl-bold {
+
+  font-size: 3.5rem; // 56px
+  line-height: 4.5rem; // 72px
+  font-weight: bold;
+}
+
+@mixin display-lg-regular {
+
+  font-size: 3rem; // 48px
+  line-height: 4rem; // 64px
+  font-weight: normal;
+}
+
+@mixin display-lg-medium {
+
+  font-size: 3rem; // 48px
+  line-height: 4rem; // 64px
+  font-weight: 500;
+}
+
+@mixin display-lg-semibold {
+
+  font-size: 3rem; // 48px
+  line-height: 4rem; // 64px
+  font-weight: 600;
+}
+
+@mixin display-lg-bold {
+
+  font-size: 3rem; // 48px
+  line-height: 4rem; // 64px
+  font-weight: bold;
+}
+
+/// Updated with tracking and specific weights
+@mixin title-lg-regular {
+
+  font-size: 2.5rem; // 40px
+  line-height: 3rem; // 48px
+  font-weight: normal;
+  letter-spacing: -0.02em; // Tracking -2%
+}
+
+@mixin title-lg-medium {
+
+  font-size: 2.5rem; // 40px
+  line-height: 3rem; // 48px
+  font-weight: 500;
+  letter-spacing: -0.02em; // Tracking -2%
+}
+
+@mixin title-lg-semibold {
+
+  font-size: 2.5rem; // 40px
+  line-height: 3rem; // 48px
+  font-weight: 600;
+  letter-spacing: -0.02em; // Tracking -2%
+}
+
+@mixin title-lg-bold {
+
+  font-size: 2.5rem; // 40px
+  line-height: 3rem; // 48px
+  font-weight: bold;
+  letter-spacing: -0.02em; // Tracking -2%
+}
+
+@mixin title-md-light {
+  font-size: 2rem; // 32px
+  line-height: 2.5rem; // 40px
+  font-weight: 300;
+  letter-spacing: -0.02em; // Tracking -2%
+}
+
+@mixin title-md-regular {
+
+  font-size: 2rem; // 32px
+  line-height: 2.5rem; // 40px
+  font-weight: normal;
+  letter-spacing: -0.02em; // Tracking -2%
+}
+
+@mixin title-md-medium {
+
+  font-size: 2rem; // 32px
+  line-height: 2.5rem; // 40px
+  font-weight: 500;
+  letter-spacing: -0.02em; // Tracking -2%
+}
+
+@mixin title-md-semibold {
+
+  font-size: 2rem; // 32px
+  line-height: 2.5rem; // 40px
+  font-weight: 600;
+  letter-spacing: -0.02em; // Tracking -2%
+}
+
+@mixin title-md-bold {
+
+  font-size: 2rem; // 32px
+  line-height: 2.5rem; // 40px
+  font-weight: bold;
+  letter-spacing: -0.02em; // Tracking -2%
+}
+
+@mixin title-36-light {
+  font-size: 2.25rem; // 36px
+  line-height: 2.75rem; // 44px
+  font-weight: 300;
+  letter-spacing: -0.02em; // Tracking -2%
+}
+
+@mixin title-sm-regular {
+
+  font-size: 1.875rem; // 30px
+  line-height: 2.25rem; // 36px
+  font-weight: normal;
+  letter-spacing: -0.02em; // Tracking -2%
+}
+
+@mixin title-sm-medium {
+
+  font-size: 1.875rem; // 30px
+  line-height: 2.25rem; // 36px
+  font-weight: 500;
+  letter-spacing: -0.02em; // Tracking -2%
+}
+
+@mixin title-sm-semibold {
+
+  font-size: 1.875rem; // 30px
+  line-height: 2.25rem; // 36px
+  font-weight: 600;
+  letter-spacing: -0.02em; // Tracking -2%
+}
+
+@mixin title-sm-bold {
+
+  font-size: 1.875rem; // 30px
+  line-height: 2.25rem; // 36px
+  font-weight: bold;
+  letter-spacing: -0.02em; // Tracking -2%
+}
+
+@mixin title-xs-regular {
+
+  font-size: 1.5rem; // 24px
+  line-height: 2rem; // 32px
+  font-weight: normal;
+  letter-spacing: -0.02em; // Tracking -2%
+}
+
+@mixin title-xs-medium {
+
+  font-size: 1.5rem; // 24px
+  line-height: 2rem; // 32px
+  font-weight: 500;
+  letter-spacing: -0.02em; // Tracking -2%
+}
+
+@mixin title-xs-semibold {
+
+  font-size: 1.5rem; // 24px
+  line-height: 2rem; // 32px
+  font-weight: 600;
+  letter-spacing: -0.02em; // Tracking -2%
+}
+
+@mixin title-xs-bold {
+
+  font-size: 1.5rem; // 24px
+  line-height: 2rem; // 32px
+  font-weight: bold;
+  letter-spacing: -0.02em; // Tracking -2%
+}
+
+// Rest of the typography remains unchanged (Montserrat or default font family)
+
+// Display Styles (Remaining unchanged)
+@mixin display-md-regular {
+  font-size: 2.5rem; // 40px
+  line-height: 3.5rem; // 56px
+  font-weight: normal;
+}
+
+@mixin display-md-medium {
+  font-size: 2.5rem; // 40px
+  line-height: 3.5rem; // 56px
+  font-weight: 500;
+}
+
+@mixin display-md-semibold {
+  font-size: 2.5rem; // 40px
+  line-height: 3.5rem; // 56px
+  font-weight: 600;
+}
+
+@mixin display-md-bold {
+  font-size: 2.5rem; // 40px
+  line-height: 3.5rem; // 56px
+  font-weight: bold;
+}
+
+@mixin display-sm-regular {
+  font-size: 2rem; // 32px
+  line-height: 3rem; // 48px
+  font-weight: normal;
+}
+
+@mixin display-sm-medium {
+  font-size: 2rem; // 32px
+  line-height: 3rem; // 48px
+  font-weight: 500;
+}
+
+@mixin display-sm-semibold {
+  font-size: 2rem; // 32px
+  line-height: 3rem; // 48px
+  font-weight: 600;
+}
+
+@mixin display-sm-bold {
+  font-size: 2rem; // 32px
+  line-height: 3rem; // 48px
+  font-weight: bold;
+}
+
+@mixin display-xs-regular {
+  font-size: 1.5rem; // 24px
+  line-height: 2rem; // 32px
+  font-weight: normal;
+}
+
+@mixin display-xs-medium {
+  font-size: 1.5rem; // 24px
+  line-height: 2rem; // 32px
+  font-weight: 500;
+}
+
+@mixin display-xs-semibold {
+  font-size: 1.5rem; // 24px
+  line-height: 2rem; // 32px
+  font-weight: 600;
+}
+
+@mixin display-xs-bold {
+  font-size: 1.5rem; // 24px
+  line-height: 2rem; // 32px
+  font-weight: bold;
+}
+
+// Text Styles (Unchanged)
+@mixin text-xl-regular {
+  font-size: 1.25rem; // 20px
+  line-height: 1.75rem; // 28px
+  font-weight: normal;
+}
+
+@mixin text-xl-medium {
+  font-size: 1.25rem; // 20px
+  line-height: 1.75rem; // 28px
+  font-weight: 500;
+}
+
+@mixin text-xl-semibold {
+  font-size: 1.25rem; // 20px
+  line-height: 1.75rem; // 28px
+  font-weight: 600;
+}
+
+@mixin text-xl-bold {
+  font-size: 1.25rem; // 20px
+  line-height: 1.75rem; // 28px
+  font-weight: bold;
+}
+
+@mixin text-lg-regular {
+  font-size: 1.125rem; // 18px
+  line-height: 1.75rem; // 28px
+  font-weight: normal;
+}
+
+@mixin text-lg-medium {
+  font-size: 1.125rem; // 18px
+  line-height: 1.75rem; // 28px
+  font-weight: 500;
+}
+
+@mixin text-lg-semibold {
+  font-size: 1.125rem; // 18px
+  line-height: 1.75rem; // 28px
+  font-weight: 600;
+}
+
+@mixin text-lg-bold {
+  font-size: 1.125rem; // 18px
+  line-height: 1.75rem; // 28px
+  font-weight: bold;
+}
+
+@mixin text-md-regular {
+  font-size: 1rem; // 16px
+  line-height: 1.5rem; // 24px
+  font-weight: normal;
+}
+
+@mixin text-md-medium {
+  font-size: 1rem; // 16px
+  line-height: 1.5rem; // 24px
+  font-weight: 500;
+}
+
+@mixin text-md-semibold {
+  font-size: 1rem; // 16px
+  line-height: 1.5rem; // 24px
+  font-weight: 600;
+}
+
+@mixin text-md-bold {
+  font-size: 1rem; // 16px
+  line-height: 1.5rem; // 24px
+  font-weight: bold;
+}
+
+@mixin text-sm-regular {
+  font-size: 0.875rem; // 14px
+  line-height: 1.25rem; // 20px
+  font-weight: normal;
+}
+
+@mixin text-sm-medium {
+  font-size: 0.875rem; // 14px
+  line-height: 1.25rem; // 20px
+  font-weight: 500;
+}
+
+@mixin text-sm-semibold {
+  font-size: 0.875rem; // 14px
+  line-height: 1.25rem; // 20px
+  font-weight: 600;
+}
+
+@mixin text-sm-bold {
+  font-size: 0.875rem; // 14px
+  line-height: 1.25rem; // 20px
+  font-weight: bold;
+}
+
+@mixin text-xs-regular {
+  font-size: 0.75rem; // 12px
+  line-height: 1rem; // 16px
+  font-weight: normal;
+}
+
+@mixin text-xs-medium {
+  font-size: 0.75rem; // 12px
+  line-height: 1rem; // 16px
+  font-weight: 500;
+}
+
+@mixin text-xs-semibold {
+  font-size: 0.75rem; // 12px
+  line-height: 1rem; // 16px
+  font-weight: 600;
+}
+
+@mixin text-xs-bold {
+  font-size: 0.75rem; // 12px
+  line-height: 1rem; // 16px
+  font-weight: bold;
+}
+
+@mixin display-2xs-medium {
+  font-size: 1.875rem; // 30px
+  font-weight: 500;
+  line-height: 2.5rem; // 40px
+}
+
+
+@mixin display-2xs-semibold {
+  font-size: 1.875rem; // 30px
+  font-weight: 600;
+  line-height: 2.5rem; // 40px
+}
+
+@mixin display-2xs-bold {
+  font-size: 1.875rem; // 30px
+  font-weight: 700;
+  line-height: 2.5rem; // 40px
+}

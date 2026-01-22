@@ -1,0 +1,12 @@
+@import '@/styles/base';
+
+
+.footer {
+  @include text-xs-regular;
+  text-align: center;
+  color: $text-label;
+
+  p {
+    margin: 0;
+  }
+}

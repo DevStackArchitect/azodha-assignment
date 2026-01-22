@@ -1,0 +1,186 @@
+@import "../base";
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  background: $background;
+}
+
+.sidebar {
+  width: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $spacing-3xl 0;
+  background: $background-dark;
+  border-right: 1px solid $border-secondary;
+}
+
+.logoBox {
+  width: $spacing-6xl;
+  height: $spacing-6xl;
+  border-radius: $radius-xl;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $primary;
+  margin-bottom: $spacing-6xl;
+}
+
+.navIcons {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-3xl;
+}
+
+.navIcon {
+  width: $spacing-6xl;
+  height: $spacing-6xl;
+  border-radius: $radius-xl;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: $text-label;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    background: $background-light;
+  }
+}
+
+.bottomIcon {
+  @extend .navIcon;
+  margin-top: $spacing-3xl;
+}
+
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-4xl;
+}
+
+.successAnimation {
+  position: relative;
+  margin-bottom: $spacing-6xl;
+}
+
+.decorativeDot {
+  position: absolute;
+  border-radius: $radius-full;
+  background: $primary;
+
+  &.dot1 {
+    top: -$spacing-4xl;
+    left: -$spacing-xl;
+    width: $spacing-lg;
+    height: $spacing-lg;
+  }
+
+  &.dot2 {
+    top: 0;
+    right: -$spacing-4xl;
+    width: $spacing-md;
+    height: $spacing-md;
+    opacity: 0.6;
+  }
+
+  &.dot3 {
+    bottom: -$spacing-xl;
+    right: 0;
+    width: $spacing-md;
+    height: $spacing-md;
+    opacity: 0.4;
+  }
+}
+
+.checkCircle {
+  width: 10rem;
+  height: 10rem;
+  border-radius: $radius-full;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba($primary, 0.1);
+  border: 2px solid $border-secondary;
+}
+
+.title {
+  @include display-lg-regular;
+  color: $foreground;
+  margin-bottom: $spacing-xl;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  @include text-md-regular;
+  line-height: 1.6;
+  margin-bottom: $spacing-4xl;
+  text-align: center;
+  color: $text-muted;
+}
+
+.completionBadge {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  padding: $spacing-lg $spacing-3xl;
+  border-radius: $radius-full;
+  background: rgba($primary, 0.1);
+  border: 1px solid rgba($primary, 0.2);
+  margin-bottom: $spacing-6xl;
+}
+
+.badgeDot {
+  width: $spacing-md;
+  height: $spacing-md;
+  border-radius: $radius-full;
+  background: $primary;
+}
+
+.badgeText {
+  @include text-sm-semibold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: $primary;
+}
+
+.enterButton {
+  @include text-lg-semibold;
+  padding: 0 $spacing-6xl;
+  height: 60px;
+  border-radius: $radius-2xl;
+  background: $base-white;
+  color: $base-black;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: $spacing-lg;
+  margin-bottom: $spacing-xl;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.countdown {
+  @include text-xs-regular;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: $spacing-11xl;
+  color: $text-label;
+}
+
+.footer {
+  @include text-xs-regular;
+  text-align: center;
+  color: $text-disabled;
+}

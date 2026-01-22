@@ -1,0 +1,214 @@
+@import '../../../styles/base';
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  outline: none;
+  position: relative;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+
+  &:focus-visible {
+    outline: 2px solid $primary;
+    outline-offset: 2px;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+}
+
+// Variants
+.primary {
+  background: $button-bg;
+  color: $button-text;
+
+  &:hover:not(:disabled) {
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(0);
+  }
+}
+
+.secondary {
+  background: $background-light;
+  color: $text-primary;
+  border: 1.5px solid $input-border;
+
+  &:hover:not(:disabled) {
+    background: rgba($background-light, 0.8);
+    border-color: $primary;
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(0);
+  }
+}
+
+.outline {
+  background: transparent;
+  color: $primary;
+  border: 1.5px solid $primary;
+
+  &:hover:not(:disabled) {
+    background: rgba($primary, 0.1);
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(0);
+  }
+}
+
+.text {
+  background: transparent;
+  color: $text-muted;
+  border: none;
+  padding: 0;
+  height: auto;
+  border-radius: 0;
+
+  &:hover:not(:disabled) {
+    color: $text-primary;
+  }
+
+  &:active:not(:disabled) {
+    opacity: 0.7;
+  }
+
+  &:focus-visible {
+    outline: none;
+    text-decoration: underline;
+  }
+}
+
+// Sizes
+.small {
+  height: 40px;
+  padding: 0 16px;
+  font-size: 14px;
+
+  @include mobile {
+    height: 36px;
+    padding: 0 12px;
+    font-size: 13px;
+  }
+}
+
+.medium {
+  height: 52px;
+  padding: 0 24px;
+  font-size: 15px;
+
+  @include mobile {
+    height: 44px;
+    padding: 0 16px;
+    font-size: 14px;
+  }
+}
+
+.large {
+  height: 68px;
+  padding: 0 32px;
+  font-size: 16px;
+
+  @include mobile {
+    height: 52px;
+    padding: 0 20px;
+    font-size: 15px;
+  }
+}
+
+// Width
+.fullWidth {
+  width: 100%;
+}
+
+// Loading state
+.loading {
+  pointer-events: none;
+}
+
+.spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: spin 1s linear infinite;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// Content
+.content {
+  display: flex;
+  align-items: center;
+}
+
+// Icons
+.iconLeft,
+.iconRight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.iconLeft {
+  margin-right: -4px;
+}
+
+.iconRight {
+  margin-left: -4px;
+}
+
+// Hover Arrow
+.withHoverArrow {
+  padding-right: 48px;
+}
+
+.hoverArrowContainer {
+  position: absolute;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.hoverArrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}

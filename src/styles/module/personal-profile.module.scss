@@ -1,0 +1,271 @@
+@import "../base";
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $spacing-xl;
+  background: $background;
+
+  @include mobile {
+    padding: $spacing-xl $spacing-md;
+  }
+}
+
+.stepIndicator {
+  width: 100%;
+  max-width: $width-md;
+  margin-bottom: $spacing-4xl;
+}
+
+.stepDots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-lg;
+  margin-bottom: $spacing-lg;
+}
+
+.stepDot {
+  height: 4px;
+  width: $spacing-7xl;
+  border-radius: $radius-full;
+  background: $border-primary;
+
+  &.active {
+    background: $primary;
+  }
+}
+
+.stepText {
+  @include text-xs-semibold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: $text-muted;
+}
+
+.content {
+  width: 100%;
+  max-width: $width-md
+}
+
+.titleSection {
+  @include title-md-light;
+  text-align: center;
+  margin-bottom: $spacing-4xl;
+}
+
+.title {
+  @include display-md-regular;
+  color: $foreground;
+  margin-bottom: $spacing-xl;
+  letter-spacing: -0.02em;
+
+  @include mobile {
+    font-size: 1.75rem;
+  }
+}
+
+.description {
+  @include text-md-regular;
+  line-height: 1.6;
+  color: $text-muted;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-2xl;
+
+  @include mobile {
+    gap: 0.82rem;
+  }
+}
+
+.photoUpload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: $spacing-2xl;
+}
+
+.photoWrapper {
+  position: relative;
+}
+
+.photoLabel {
+  cursor: pointer;
+}
+
+.photoCircle {
+  width: 8rem;
+  height: 8rem;
+  border-radius: $radius-full;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed $border-primary;
+  background: $input-bg;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: $radius-full;
+  }
+
+  &.hasImage {
+    border: none;
+    background: transparent;
+  }
+}
+
+.plusButton {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: $spacing-5xl;
+  height: $spacing-5xl;
+  border-radius: $radius-full;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $primary;
+  cursor: pointer;
+}
+
+.photoInput {
+  display: none;
+}
+
+.photoText {
+  @include text-xs-semibold;
+  margin-top: $spacing-xl;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: $text-label;
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+}
+
+.formLabel {
+  @include text-xs-semibold;
+  display: block;
+  text-transform: uppercase;
+  margin-bottom: $spacing-xl;
+  letter-spacing: 0.2em;
+  color: $text-label;
+}
+
+.input {
+  @include text-md-regular;
+  width: 100%;
+  height: 60px;
+  padding: 0 $spacing-3xl;
+  border-radius: $radius-2xl;
+  background: $input-bg;
+  border: 1px solid $input-border;
+  color: $input-text;
+  outline: none;
+  transition: all 0.2s;
+
+  &:focus {
+    border-color: $border-focus;
+    box-shadow: 0 0 0 2px rgba($primary, 0.2);
+  }
+
+  &.error {
+    border-color: $error;
+  }
+
+  &::placeholder {
+    color: $input-placeholder;
+  }
+}
+
+.errorText {
+  @include text-sm-regular;
+  margin-top: $spacing-md;
+  color: $error;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $spacing-3xl;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: $spacing-xl;
+  }
+}
+
+.selectWrapper {
+  position: relative;
+}
+
+.select {
+  @extend .input;
+  appearance: none;
+  cursor: pointer;
+}
+
+.selectIcon {
+  position: absolute;
+  top: 50%;
+  right: $spacing-3xl;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.submitButton {
+  @include text-lg-semibold;
+  width: 100%;
+  height: 60px;
+  border-radius: $radius-2xl;
+  background: $button-bg;
+  color: $button-text;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-md;
+  margin-top: $spacing-6xl;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.skipSection {
+  text-align: center;
+  margin-top: $spacing-4xl;
+}
+
+.skipButton {
+  @include text-md-regular;
+  color: $text-muted;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.footer {
+  @include text-xs-regular;
+  text-align: center;
+  margin-top: $spacing-8xl;
+  color: $text-label;
+}

@@ -1,0 +1,93 @@
+// styles/theme/_colors.scss
+// Premium Clarity - Color Palette
+
+// ===================================
+// Primary Colors
+// ===================================
+$primary: #A78BFA;           // Main purple/lavender
+$primary-dark: #9333EA;      // Darker purple for hover states
+$primary-light: #C4B5FD;     // Lighter purple for backgrounds
+
+// ===================================
+// Background Colors
+// ===================================
+$background: #2C2C2E;        // Main background
+$background-dark: #1C1C1E;   // Darker background (sidebar, cards)
+$background-light: #3A3A3C;  // Lighter background (inputs, hover states)
+
+// ===================================
+// Foreground/Text Colors
+// ===================================
+$foreground: #FFFFFF;        // Primary text (white)
+$text-primary: #F4F4F2;      // Same as foreground
+$text-secondary: #E5E5E5;    // Slightly dimmed white
+$text-muted: #7B7B7B;        // Muted gray text
+$text-label: #636366;        // Labels and secondary info
+$text-disabled: #48484A;     // Disabled text
+
+// ===================================
+// Border & Divider Colors
+// ===================================
+$border-primary: #48484A;    // Main borders
+$border-secondary: #3A3A3C;  // Subtle borders
+$border-focus: #A78BFA;      // Focus state borders
+
+// ===================================
+// Input & Form Colors
+// ===================================
+$input-bg: #3A3A3C;          // Input background
+$input-border: #48484A;      // Input border
+$input-text: #E5E5E5;        // Input text color
+$input-placeholder: #8E8E93; // Placeholder text
+
+// ===================================
+// Semantic Colors
+// ===================================
+// Success
+$success: #10B981;           // Green for success states
+$success-light: #D1FAE5;     // Light green background
+
+// Error
+$error: #EF4444;             // Red for errors
+$error-light: #FEE2E2;       // Light red background
+
+// Warning
+$warning: #F59E0B;           // Orange for warnings
+$warning-light: #FEF3C7;     // Light orange background
+
+// Info
+$info: #3B82F6;              // Blue for info
+$info-light: #DBEAFE;        // Light blue background
+
+// ===================================
+// Component-Specific Colors
+// ===================================
+// Card
+$card-bg: #1C1C1E;
+$card-border: #3A3A3C;
+$card-hover-border: rgba(167, 139, 250, 0.3); // Purple with opacity
+
+// Button
+$button-bg: #A78BFA;
+$button-text: #1C1C1E;
+$button-hover: #9333EA;
+
+// Badge
+$badge-bg: rgba(167, 139, 250, 0.1);
+$badge-border: rgba(167, 139, 250, 0.2);
+$badge-text: #A78BFA;
+
+// ===================================
+// Opacity Variations
+// ===================================
+$primary-opacity-10: rgba(167, 139, 250, 0.1);
+$primary-opacity-20: rgba(167, 139, 250, 0.2);
+$primary-opacity-30: rgba(167, 139, 250, 0.3);
+$primary-opacity-50: rgba(167, 139, 250, 0.5);
+
+// ===================================
+// Legacy/Base Colors (if needed)
+// ===================================
+$base-white: #FFFFFF;
+$base-black: #1C1C1E;
+

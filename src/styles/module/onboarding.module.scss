@@ -1,0 +1,16 @@
+@import '../base';
+
+.container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.stepIndicatorWrapper {
+display: flex;
+justify-content: center;
+align-items: center;
+margin: $spacing-5xl auto;
+@include mobile {
+  margin: 0 auto $spacing-2xl;
+}
+}
