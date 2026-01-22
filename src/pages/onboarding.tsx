@@ -61,11 +61,7 @@ const OnboardingPage: React.FC = () => {
     switch (activeStep) {
       case 1:
         return (
-          <PersonalProfile
-            key="personal-profile"
-            onNext={handleNextStep}
-            onSkip={handleNextStep}
-          />
+          <PersonalProfile key="personal-profile" onNext={handleNextStep} onSkip={handleNextStep} />
         );
       case 2:
         return (
@@ -86,12 +82,7 @@ const OnboardingPage: React.FC = () => {
           />
         );
       case 4:
-        return (
-          <Success
-            key="success"
-            onContinue={handleComplete}
-          />
-        );
+        return <Success key="success" onContinue={handleComplete} />;
       default:
         return null;
     }
@@ -106,9 +97,7 @@ const OnboardingPage: React.FC = () => {
         </div>
       )}
 
-      <AnimatePresence mode="wait">
-        {renderStep()}
-      </AnimatePresence>
+      <AnimatePresence mode="wait">{renderStep()}</AnimatePresence>
     </div>
   );
 };

@@ -1,7 +1,5 @@
 // Typography Styles
 
-
-
 // Display Styles (Spectral font for 3xl, 2xl, xl, lg)
 @mixin display-3xl-semibold {
   font-size: 4.5rem; // 72px
@@ -10,91 +8,78 @@
 }
 
 @mixin display-3xl-regular {
-
   font-size: 4.5rem; // 72px
   line-height: 5.5rem; // 88px
   font-weight: normal;
 }
 
 @mixin display-2xl-regular {
-
   font-size: 4rem; // 64px
   line-height: 5rem; // 80px
   font-weight: normal;
 }
 
 @mixin display-2xl-medium {
-
   font-size: 4rem; // 64px
   line-height: 5rem; // 80px
   font-weight: 500;
 }
 
 @mixin display-2xl-semibold {
-
   font-size: 4rem; // 64px
   line-height: 5rem; // 80px
   font-weight: 600;
 }
 
 @mixin display-2xl-bold {
-
   font-size: 4rem; // 64px
   line-height: 5rem; // 80px
   font-weight: bold;
 }
 
 @mixin display-xl-regular {
-
   font-size: 3.5rem; // 56px
   line-height: 4.5rem; // 72px
   font-weight: normal;
 }
 
 @mixin display-xl-medium {
-
   font-size: 3.5rem; // 56px
   line-height: 4.5rem; // 72px
   font-weight: 500;
 }
 
 @mixin display-xl-semibold {
-
   font-size: 3.5rem; // 56px
   line-height: 4.5rem; // 72px
   font-weight: 600;
 }
 
 @mixin display-xl-bold {
-
   font-size: 3.5rem; // 56px
   line-height: 4.5rem; // 72px
   font-weight: bold;
 }
 
 @mixin display-lg-regular {
-
   font-size: 3rem; // 48px
   line-height: 4rem; // 64px
   font-weight: normal;
 }
 
 @mixin display-lg-medium {
-
   font-size: 3rem; // 48px
   line-height: 4rem; // 64px
   font-weight: 500;
 }
 
 @mixin display-lg-semibold {
-
   font-size: 3rem; // 48px
   line-height: 4rem; // 64px
   font-weight: 600;
 }
 
 @mixin display-lg-bold {
-
   font-size: 3rem; // 48px
   line-height: 4rem; // 64px
   font-weight: bold;
@@ -102,7 +87,6 @@
 
 /// Updated with tracking and specific weights
 @mixin title-lg-regular {
-
   font-size: 2.5rem; // 40px
   line-height: 3rem; // 48px
   font-weight: normal;
@@ -110,7 +94,6 @@
 }
 
 @mixin title-lg-medium {
-
   font-size: 2.5rem; // 40px
   line-height: 3rem; // 48px
   font-weight: 500;
@@ -118,7 +101,6 @@
 }
 
 @mixin title-lg-semibold {
-
   font-size: 2.5rem; // 40px
   line-height: 3rem; // 48px
   font-weight: 600;
@@ -126,7 +108,6 @@
 }
 
 @mixin title-lg-bold {
-
   font-size: 2.5rem; // 40px
   line-height: 3rem; // 48px
   font-weight: bold;
@@ -141,7 +122,6 @@
 }
 
 @mixin title-md-regular {
-
   font-size: 2rem; // 32px
   line-height: 2.5rem; // 40px
   font-weight: normal;
@@ -149,7 +129,6 @@
 }
 
 @mixin title-md-medium {
-
   font-size: 2rem; // 32px
   line-height: 2.5rem; // 40px
   font-weight: 500;
@@ -157,7 +136,6 @@
 }
 
 @mixin title-md-semibold {
-
   font-size: 2rem; // 32px
   line-height: 2.5rem; // 40px
   font-weight: 600;
@@ -165,7 +143,6 @@
 }
 
 @mixin title-md-bold {
-
   font-size: 2rem; // 32px
   line-height: 2.5rem; // 40px
   font-weight: bold;
@@ -180,7 +157,6 @@
 }
 
 @mixin title-sm-regular {
-
   font-size: 1.875rem; // 30px
   line-height: 2.25rem; // 36px
   font-weight: normal;
@@ -188,7 +164,6 @@
 }
 
 @mixin title-sm-medium {
-
   font-size: 1.875rem; // 30px
   line-height: 2.25rem; // 36px
   font-weight: 500;
@@ -196,7 +171,6 @@
 }
 
 @mixin title-sm-semibold {
-
   font-size: 1.875rem; // 30px
   line-height: 2.25rem; // 36px
   font-weight: 600;
@@ -204,7 +178,6 @@
 }
 
 @mixin title-sm-bold {
-
   font-size: 1.875rem; // 30px
   line-height: 2.25rem; // 36px
   font-weight: bold;
@@ -212,7 +185,6 @@
 }
 
 @mixin title-xs-regular {
-
   font-size: 1.5rem; // 24px
   line-height: 2rem; // 32px
   font-weight: normal;
@@ -220,7 +192,6 @@
 }
 
 @mixin title-xs-medium {
-
   font-size: 1.5rem; // 24px
   line-height: 2rem; // 32px
   font-weight: 500;
@@ -228,7 +199,6 @@
 }
 
 @mixin title-xs-semibold {
-
   font-size: 1.5rem; // 24px
   line-height: 2rem; // 32px
   font-weight: 600;
@@ -236,7 +206,6 @@
 }
 
 @mixin title-xs-bold {
-
   font-size: 1.5rem; // 24px
   line-height: 2rem; // 32px
   font-weight: bold;
@@ -444,7 +413,6 @@
   font-weight: 500;
   line-height: 2.5rem; // 40px
 }
-
 
 @mixin display-2xs-semibold {
   font-size: 1.875rem; // 30px

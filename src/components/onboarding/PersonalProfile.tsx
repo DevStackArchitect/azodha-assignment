@@ -7,6 +7,7 @@ import { updatePersonalProfile } from '@/store/slices/onboardingSlice';
 import { Input, Button, Footer } from '@/components/shared';
 import { showSuccessToast } from '@/utils/toast';
 import styles from '@/styles/module/personal-profile.module.scss';
+import Image from 'next/image';
 
 const validationSchema = Yup.object({
   name: Yup.string()
@@ -17,9 +18,7 @@ const validationSchema = Yup.object({
     .min(1, 'Age must be at least 1')
     .max(120, 'Age must be less than 120')
     .required('Age is required'),
-  email: Yup.string()
-    .email('Invalid email address')
-    .required('Email is required'),
+  email: Yup.string().email('Invalid email address').required('Email is required'),
 });
 
 interface PersonalProfileProps {
@@ -33,7 +32,7 @@ const PersonalProfile: React.FC<PersonalProfileProps> = ({
   onNext,
   onSkip,
   showNavigation = true,
-  buttonText = 'Continue'
+  buttonText = 'Continue',
 }) => {
   const dispatch = useAppDispatch();
   const { personalProfile } = useAppSelector((state) => state.onboarding);
@@ -99,9 +98,11 @@ const PersonalProfile: React.FC<PersonalProfileProps> = ({
           <div className={styles.photoUpload}>
             <div className={styles.photoWrapper}>
               <label htmlFor="profilePicture" className={styles.photoLabel}>
-                <div className={`${styles.photoCircle} ${profilePicturePreview ? styles.hasImage : ''}`}>
+                <div
+                  className={`${styles.photoCircle} ${profilePicturePreview ? styles.hasImage : ''}`}
+                >
                   {profilePicturePreview ? (
-                    <img src={profilePicturePreview} alt="Profile" />
+                    <Image src={profilePicturePreview} alt="Profile" width={300} height={300} />
                   ) : (
                     <svg
                       width="40"
@@ -126,10 +127,7 @@ const PersonalProfile: React.FC<PersonalProfileProps> = ({
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <path
-                      d="M19 13H13V19H11V13H5V11H11V5H13V11H19V13Z"
-                      fill="#1C1C1E"
-                    />
+                    <path d="M19 13H13V19H11V13H5V11H11V5H13V11H19V13Z" fill="#1C1C1E" />
                   </svg>
                 </div>
                 <input

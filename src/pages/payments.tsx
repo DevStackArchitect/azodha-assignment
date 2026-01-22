@@ -24,10 +24,7 @@ const PaymentsPage: React.FC = () => {
     <div className={styles.container}>
       <Sidebar activePage="payments" />
       <div className={styles.mainContent}>
-        <PaymentInformation 
-          showNavigation={false}
-          buttonText="Save Changes"
-        />
+        <PaymentInformation showNavigation={false} buttonText="Save Changes" />
       </div>
     </div>
   );

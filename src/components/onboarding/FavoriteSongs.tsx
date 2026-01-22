@@ -20,7 +20,7 @@ const FavoriteSongs: React.FC<FavoriteSongsProps> = ({
   onBack,
   onSkip,
   showNavigation = true,
-  buttonText = 'Finalize My Library'
+  buttonText = 'Finalize My Library',
 }) => {
   const dispatch = useAppDispatch();
   const { favoriteSongs } = useAppSelector((state) => state.onboarding);
@@ -281,9 +281,7 @@ const FavoriteSongs: React.FC<FavoriteSongsProps> = ({
                 fill="#48484A"
               />
             </svg>
-            <p className={styles.emptyText}>
-              Add more tracks to refine your profile
-            </p>
+            <p className={styles.emptyText}>Add more tracks to refine your profile</p>
           </motion.div>
         )}
 

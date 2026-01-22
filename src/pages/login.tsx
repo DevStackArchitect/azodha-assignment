@@ -34,7 +34,10 @@ const validationSchema = Yup.object({
   username: Yup.string()
     .required('Username is required')
     .min(3, 'Username must be at least 3 characters')
-    .matches(/^[a-zA-Z0-9._]+$/, 'Username can only contain letters, numbers, dots, and underscores'),
+    .matches(
+      /^[a-zA-Z0-9._]+$/,
+      'Username can only contain letters, numbers, dots, and underscores'
+    ),
   password: Yup.string()
     .required('Password is required')
     .min(6, 'Password must be at least 6 characters'),
@@ -106,12 +109,21 @@ const LoginPage: React.FC = () => {
             type: 'spring',
             stiffness: 260,
             damping: 20,
-            delay: 0.1
+            delay: 0.1,
           }}
         >
           <div className={styles.logoBox}>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path d="M12 0C12.2156 0 12.4313 0.046875 12.6281 0.135937L21.4547 3.88125C22.486 4.31719 23.2547 5.33438 23.25 6.5625C23.2266 11.2125 21.3141 19.7203 13.2375 23.5875C12.4547 23.9625 11.5453 23.9625 10.7625 23.5875C2.68596 19.7203 0.773459 11.2125 0.750021 6.5625C0.745334 5.33438 1.51408 4.31719 2.54533 3.88125L11.3766 0.135937C11.5688 0.046875 11.7844 0 12 0V0ZM12 3.13125V20.85C18.4688 17.7188 20.2078 10.7859 20.25 6.62813L12 3.13125V3.13125V3.13125" fill="#A78BFA" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M12 0C12.2156 0 12.4313 0.046875 12.6281 0.135937L21.4547 3.88125C22.486 4.31719 23.2547 5.33438 23.25 6.5625C23.2266 11.2125 21.3141 19.7203 13.2375 23.5875C12.4547 23.9625 11.5453 23.9625 10.7625 23.5875C2.68596 19.7203 0.773459 11.2125 0.750021 6.5625C0.745334 5.33438 1.51408 4.31719 2.54533 3.88125L11.3766 0.135937C11.5688 0.046875 11.7844 0 12 0V0ZM12 3.13125V20.85C18.4688 17.7188 20.2078 10.7859 20.25 6.62813L12 3.13125V3.13125V3.13125"
+                fill="#A78BFA"
+              />
             </svg>
           </div>
         </motion.div>

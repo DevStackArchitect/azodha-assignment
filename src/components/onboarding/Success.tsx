@@ -186,10 +186,10 @@ const Success: React.FC<SuccessProps> = ({ onContinue }) => {
         </motion.p>
 
         {/* Footer */}
-        <Footer 
-          text="PREMIUM CLARITY · YOUR JOURNEY STARTS NOW" 
+        <Footer
+          text="PREMIUM CLARITY · YOUR JOURNEY STARTS NOW"
           className={styles.footer}
-          animated 
+          animated
         />
       </div>
     </motion.div>

@@ -1,5 +1,4 @@
-@import '../../../styles/base';
-
+@import "../../../styles/base";
 
 .formField {
   display: flex;
@@ -93,7 +92,7 @@
     cursor: not-allowed;
   }
 
-  &[aria-invalid='true'] {
+  &[aria-invalid="true"] {
     border-color: $error;
 
     &:focus {

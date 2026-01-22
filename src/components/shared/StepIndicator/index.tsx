@@ -8,11 +8,7 @@ export interface StepIndicatorProps {
   className?: string;
 }
 
-const StepIndicator: React.FC<StepIndicatorProps> = ({
-  currentStep,
-  totalSteps,
-  className,
-}) => {
+const StepIndicator: React.FC<StepIndicatorProps> = ({ currentStep, totalSteps, className }) => {
   return (
     <motion.div
       className={`${styles.stepIndicator} ${className || ''}`}
@@ -28,10 +24,10 @@ const StepIndicator: React.FC<StepIndicatorProps> = ({
             aria-label={`Step ${index + 1}${index < currentStep ? ' completed' : index === currentStep - 1 ? ' current' : ''}`}
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
-            transition={{ 
-              duration: 0.5, 
+            transition={{
+              duration: 0.5,
               delay: index * 0.1,
-              ease: 'easeOut'
+              ease: 'easeOut',
             }}
           />
         ))}

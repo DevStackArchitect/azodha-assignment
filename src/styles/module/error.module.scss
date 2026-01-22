@@ -1,0 +1,106 @@
+@import "../base";
+
+.errorContainer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-xl;
+  background: $background;
+
+  @include mobile {
+    padding: $spacing-lg $spacing-md;
+  }
+}
+
+.errorContent {
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-lg;
+}
+
+.errorIcon {
+  margin-bottom: $spacing-md;
+
+  svg {
+    width: 120px;
+    height: 120px;
+
+    @include mobile {
+      width: 80px;
+      height: 80px;
+    }
+  }
+}
+
+.errorCode {
+  @include display-3xl-semibold;
+  color: $primary;
+  letter-spacing: -0.02em;
+  margin: 0;
+
+  @include mobile {
+    font-size: 4rem;
+    line-height: 4.5rem;
+  }
+}
+
+.errorTitle {
+  @include title-lg-semibold;
+  color: $text-primary;
+  margin: 0;
+
+  @include mobile {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+}
+
+.errorMessage {
+  @include text-lg-regular;
+  color: $text-secondary;
+  margin: 0;
+  max-width: 500px;
+
+  @include mobile {
+    @include text-md-regular;
+  }
+}
+
+.errorActions {
+  display: flex;
+  gap: $spacing-lg;
+  margin-top: $spacing-xl;
+  width: 100%;
+  max-width: 500px;
+
+  @include mobile {
+    flex-direction: column;
+    gap: $spacing-md;
+  }
+
+  button {
+    flex: 1;
+    min-width: 0;
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+}
+
+.errorFooter {
+  @include text-xs-semibold;
+  color: $text-muted;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-top: $spacing-3xl;
+
+  @include mobile {
+    margin-top: $spacing-2xl;
+  }
+}

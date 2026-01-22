@@ -8,10 +8,10 @@ interface FooterProps {
   animated?: boolean;
 }
 
-const Footer: React.FC<FooterProps> = ({ 
+const Footer: React.FC<FooterProps> = ({
   text = 'PREMIUM CLARITY · YOUR JOURNEY STARTS NOW',
   className,
-  animated = false
+  animated = false,
 }) => {
   const footerClasses = [styles.footer, className].filter(Boolean).join(' ');
 

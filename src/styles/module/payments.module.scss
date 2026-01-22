@@ -139,7 +139,7 @@
 .cardNumber {
   @include text-xl-regular;
   color: $foreground;
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
   letter-spacing: 0.3em;
   text-align: center;
   margin-bottom: $spacing-4xl;
@@ -172,7 +172,7 @@
 
 .cardFieldMono {
   @extend .cardFieldValue;
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
 }
 
 .securityBadge {
@@ -239,7 +239,7 @@
   }
 
   &.mono {
-    font-family: 'Courier New', monospace;
+    font-family: "Courier New", monospace;
   }
 }
 

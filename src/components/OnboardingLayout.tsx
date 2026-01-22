@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import { useAppSelector } from '@/store';
-import StepIndicator from './StepIndicator';
+import { StepIndicator } from './shared';
 
 interface OnboardingLayoutProps {
   children: ReactNode;
@@ -9,7 +9,7 @@ interface OnboardingLayoutProps {
 }
 
 const OnboardingLayout: React.FC<OnboardingLayoutProps> = ({ children, title, description }) => {
-  const { currentStep, completedSteps } = useAppSelector((state) => state.onboarding);
+  const { currentStep } = useAppSelector((state) => state.onboarding);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-8 px-4">
@@ -19,7 +19,7 @@ const OnboardingLayout: React.FC<OnboardingLayoutProps> = ({ children, title, de
           <p className="text-center text-gray-600">Complete your profile setup</p>
         </div>
 
-        <StepIndicator currentStep={currentStep} completedSteps={completedSteps} />
+        <StepIndicator currentStep={currentStep} totalSteps={3} />
 
         <div className="bg-white rounded-lg shadow-xl p-8 mt-8">
           <div className="mb-6">

@@ -1,9 +1,8 @@
 import { OnboardingStepConfig } from '@/types';
 
-// Login Credentials
 export const VALID_CREDENTIALS = {
-  username: 'user123',
-  password: 'password123',
+  username: process.env.NEXT_PUBLIC_VALID_USERNAME || 'user123',
+  password: process.env.NEXT_PUBLIC_VALID_PASSWORD || 'password123',
 };
 
 // Onboarding Steps Configuration

@@ -102,7 +102,7 @@ const Button: React.FC<ButtonProps> = ({
       {!loading && icon && iconPosition === 'right' && (
         <span className={styles.iconRight}>{icon}</span>
       )}
-      
+
       {showHoverArrow && !loading && !disabled && (
         <span className={styles.hoverArrowContainer}>
           <AnimatePresence>

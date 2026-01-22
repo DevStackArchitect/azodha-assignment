@@ -17,7 +17,17 @@ const validationSchema = Yup.object({
     .required('Card number is required'),
   expiryDate: Yup.string()
     .matches(/^(0[1-9]|1[0-2])\/([0-9]{2})$/, 'Format must be MM/YY')
-    .required('Expiry date is required'),
+    .required('Expiry date is required')
+    .test('is-future-date', 'Card has expired', function (value) {
+      if (!value) return false;
+
+      const [month, year] = value.split('/');
+      const expiry = new Date(2000 + parseInt(year), parseInt(month) - 1);
+      const today = new Date();
+      const currentMonth = new Date(today.getFullYear(), today.getMonth());
+
+      return expiry >= currentMonth;
+    }),
   cvv: Yup.string()
     .matches(/^[0-9]{3,4}$/, 'CVV must be 3 or 4 digits')
     .required('CVV is required'),
@@ -36,7 +46,7 @@ const PaymentInformation: React.FC<PaymentInformationProps> = ({
   onBack,
   onSkip,
   showNavigation = true,
-  buttonText = 'Securely Save Details'
+  buttonText = 'Securely Save Details',
 }) => {
   const dispatch = useAppDispatch();
   const { paymentInformation, personalProfile } = useAppSelector((state) => state.onboarding);
@@ -152,9 +162,7 @@ const PaymentInformation: React.FC<PaymentInformationProps> = ({
                 </div>
                 <div className={styles.cardField}>
                   <p className={styles.cardFieldLabel}>Expires</p>
-                  <p className={styles.cardFieldMono}>
-                    {formik.values.expiryDate || 'MM/YY'}
-                  </p>
+                  <p className={styles.cardFieldMono}>{formik.values.expiryDate || 'MM/YY'}</p>
                 </div>
               </div>
             </div>
@@ -175,9 +183,7 @@ const PaymentInformation: React.FC<PaymentInformationProps> = ({
               </svg>
               <span className={styles.badgeText}>SECURE ENCRYPTION</span>
             </div>
-            <p className={styles.securityNote}>
-              Your data is protected with 256-bit SSL security.
-            </p>
+            <p className={styles.securityNote}>Your data is protected with 256-bit SSL security.</p>
           </motion.div>
 
           {/* Right Column - Form */}
@@ -314,21 +320,11 @@ const PaymentInformation: React.FC<PaymentInformationProps> = ({
         {showNavigation && (
           <>
             <div className={styles.navigation}>
-              <Button
-                type="button"
-                variant="text"
-                onClick={onBack}
-                className={styles.navButton}
-              >
+              <Button type="button" variant="text" onClick={onBack} className={styles.navButton}>
                 Back
               </Button>
               <span className={styles.divider}>|</span>
-              <Button
-                type="button"
-                variant="text"
-                onClick={onSkip}
-                className={styles.navButton}
-              >
+              <Button type="button" variant="text" onClick={onSkip} className={styles.navButton}>
                 Skip
               </Button>
             </div>

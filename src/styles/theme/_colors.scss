@@ -4,78 +4,78 @@
 // ===================================
 // Primary Colors
 // ===================================
-$primary: #A78BFA;           // Main purple/lavender
-$primary-dark: #9333EA;      // Darker purple for hover states
-$primary-light: #C4B5FD;     // Lighter purple for backgrounds
+$primary: #a78bfa; // Main purple/lavender
+$primary-dark: #9333ea; // Darker purple for hover states
+$primary-light: #c4b5fd; // Lighter purple for backgrounds
 
 // ===================================
 // Background Colors
 // ===================================
-$background: #2C2C2E;        // Main background
-$background-dark: #1C1C1E;   // Darker background (sidebar, cards)
-$background-light: #3A3A3C;  // Lighter background (inputs, hover states)
+$background: #2c2c2e; // Main background
+$background-dark: #1c1c1e; // Darker background (sidebar, cards)
+$background-light: #3a3a3c; // Lighter background (inputs, hover states)
 
 // ===================================
 // Foreground/Text Colors
 // ===================================
-$foreground: #FFFFFF;        // Primary text (white)
-$text-primary: #F4F4F2;      // Same as foreground
-$text-secondary: #E5E5E5;    // Slightly dimmed white
-$text-muted: #7B7B7B;        // Muted gray text
-$text-label: #636366;        // Labels and secondary info
-$text-disabled: #48484A;     // Disabled text
+$foreground: #ffffff; // Primary text (white)
+$text-primary: #f4f4f2; // Same as foreground
+$text-secondary: #e5e5e5; // Slightly dimmed white
+$text-muted: #7b7b7b; // Muted gray text
+$text-label: #636366; // Labels and secondary info
+$text-disabled: #48484a; // Disabled text
 
 // ===================================
 // Border & Divider Colors
 // ===================================
-$border-primary: #48484A;    // Main borders
-$border-secondary: #3A3A3C;  // Subtle borders
-$border-focus: #A78BFA;      // Focus state borders
+$border-primary: #48484a; // Main borders
+$border-secondary: #3a3a3c; // Subtle borders
+$border-focus: #a78bfa; // Focus state borders
 
 // ===================================
 // Input & Form Colors
 // ===================================
-$input-bg: #3A3A3C;          // Input background
-$input-border: #48484A;      // Input border
-$input-text: #E5E5E5;        // Input text color
-$input-placeholder: #8E8E93; // Placeholder text
+$input-bg: #3a3a3c; // Input background
+$input-border: #48484a; // Input border
+$input-text: #e5e5e5; // Input text color
+$input-placeholder: #8e8e93; // Placeholder text
 
 // ===================================
 // Semantic Colors
 // ===================================
 // Success
-$success: #10B981;           // Green for success states
-$success-light: #D1FAE5;     // Light green background
+$success: #10b981; // Green for success states
+$success-light: #d1fae5; // Light green background
 
 // Error
-$error: #EF4444;             // Red for errors
-$error-light: #FEE2E2;       // Light red background
+$error: #ef4444; // Red for errors
+$error-light: #fee2e2; // Light red background
 
 // Warning
-$warning: #F59E0B;           // Orange for warnings
-$warning-light: #FEF3C7;     // Light orange background
+$warning: #f59e0b; // Orange for warnings
+$warning-light: #fef3c7; // Light orange background
 
 // Info
-$info: #3B82F6;              // Blue for info
-$info-light: #DBEAFE;        // Light blue background
+$info: #3b82f6; // Blue for info
+$info-light: #dbeafe; // Light blue background
 
 // ===================================
 // Component-Specific Colors
 // ===================================
 // Card
-$card-bg: #1C1C1E;
-$card-border: #3A3A3C;
+$card-bg: #1c1c1e;
+$card-border: #3a3a3c;
 $card-hover-border: rgba(167, 139, 250, 0.3); // Purple with opacity
 
 // Button
-$button-bg: #A78BFA;
-$button-text: #1C1C1E;
-$button-hover: #9333EA;
+$button-bg: #a78bfa;
+$button-text: #1c1c1e;
+$button-hover: #9333ea;
 
 // Badge
 $badge-bg: rgba(167, 139, 250, 0.1);
 $badge-border: rgba(167, 139, 250, 0.2);
-$badge-text: #A78BFA;
+$badge-text: #a78bfa;
 
 // ===================================
 // Opacity Variations
@@ -88,6 +88,5 @@ $primary-opacity-50: rgba(167, 139, 250, 0.5);
 // ===================================
 // Legacy/Base Colors (if needed)
 // ===================================
-$base-white: #FFFFFF;
-$base-black: #1C1C1E;
-
+$base-white: #ffffff;
+$base-black: #1c1c1e;

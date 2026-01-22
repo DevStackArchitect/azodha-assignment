@@ -24,11 +24,7 @@ const ProfilePage: React.FC = () => {
     <div className={styles.container}>
       <Sidebar activePage="profile" />
       <div className={styles.mainContent}>
-        <PersonalProfile 
-          showStepIndicator={false}
-          showNavigation={false}
-          buttonText="Save Changes"
-        />
+        <PersonalProfile showNavigation={false} buttonText="Save Changes" />
       </div>
     </div>
   );

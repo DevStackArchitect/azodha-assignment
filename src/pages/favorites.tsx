@@ -24,10 +24,7 @@ const FavoritesPage: React.FC = () => {
     <div className={styles.container}>
       <Sidebar activePage="favorites" />
       <div className={styles.mainContent}>
-        <FavoriteSongs
-          showNavigation={false}
-          buttonText="Save Changes"
-        />
+        <FavoriteSongs showNavigation={false} buttonText="Save Changes" />
       </div>
     </div>
   );

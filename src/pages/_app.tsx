@@ -1,5 +1,5 @@
-import "@/styles/globals.scss";
-import type { AppProps } from "next/app";
+import '@/styles/globals.scss';
+import type { AppProps } from 'next/app';
 import { Provider } from 'react-redux';
 import { store } from '@/store';
 import { useEffect } from 'react';
@@ -8,6 +8,7 @@ import { restoreAuth } from '@/store/slices/authSlice';
 import { restoreOnboarding } from '@/store/slices/onboardingSlice';
 import { Inter } from 'next/font/google';
 import { ToasterProvider } from '@/config/toaster.config';
+import ErrorBoundary from '@/components/ErrorBoundary';
 
 // Configure Inter font
 const inter = Inter({
@@ -38,11 +39,13 @@ function AppWrapper({ Component, pageProps }: AppProps) {
 
 export default function App(props: AppProps) {
   return (
-    <Provider store={store}>
-      <div className={`${inter.variable} font-sans`}>
-        <ToasterProvider />
-        <AppWrapper {...props} />
-      </div>
-    </Provider>
+    <ErrorBoundary>
+      <Provider store={store}>
+        <div className={`${inter.variable} font-sans`}>
+          <ToasterProvider />
+          <AppWrapper {...props} />
+        </div>
+      </Provider>
+    </ErrorBoundary>
   );
 }
